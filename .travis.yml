@@ -1,0 +1,22 @@
+language: go
+
+go:
+- 1.x
+- "1.10"
+- 1.11.x
+- master
+
+services:
+  - docker
+
+before_install:
+- docker build --no-cache -t WebApp_Docker .
+- docker run WebApp_Docker /go/src/github.com/raoshruti16/WebApp_Docker/WebApp_Docker.test
+
+- docker run WebApp_Docker
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker images
+  - docker tag WebApp_Docker:latest raoshruti16/WebApp_Docker:latest
+  - docker push raoshruti16/WebApp_Docker:latest
