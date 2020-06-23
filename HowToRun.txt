@@ -1,0 +1,27 @@
+***************************************************************************************************************************************
+
+
+
+//Steps to build docker image:-
+
+
+
+sudo docker build -t multiform . -f Dockerfile.multi
+
+sudo docker run -it -p 8080:9000 multiform
+
+***************************************************************************************************************************************
+
+//Pushing the docker image into docker hub
+
+
+
+
+
+docker login --username=use_your_own --password=use_your_own
+
+sudo docker tag 7797f0630cd4 shruti161298/multiform:multidocker
+
+sudo docker push shruti161298/multiform
+
+sudo docker push shruti161298/multiform:multidocker
