@@ -8,5 +8,8 @@ go:
 
 services:
   - docker
+  
+deploy:
+  provider: heroku
 
 
