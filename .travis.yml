@@ -9,6 +9,11 @@ go:
 services:
   - docker
   
+ deploy:
+  provider: heroku
+  api_key:
+    secure: "AIzaSyA5WY7gIeDwm4FKWs2c3ZceL3yyIeYnfsg"
+
 
 
 
