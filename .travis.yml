@@ -9,9 +9,6 @@ go:
 services:
   - docker
   
-deploy:
-  provider: heroku
-  api_key:
-    secure: https://api.travis-ci.org/repos/travis-ci/travis-build/key
+
 
 
