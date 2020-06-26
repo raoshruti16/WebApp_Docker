@@ -5,6 +5,8 @@ import (
   "log"
   "net/http"
   "time"
+  "os"
+  "io"
 )
 
 type PageVariables struct {
@@ -16,8 +18,9 @@ type PageVariables struct {
 
 
 func main() {
-	http.HandleFunc("/", HomePage)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	port := os.Getenv("PORT")
+	http.HandleFunc("/",HomePage)
+	http.ListenAndServe(":"+port, nil)
 	
 }
 
