@@ -11,7 +11,7 @@ services:
 deploy:
   provider: heroku
   api_key:
-    secure: 0uSHRXXNEL_y7nEng9dCeQ
+    secure: 
   
 
 
