@@ -6,7 +6,6 @@ import (
   "net/http"
   "time"
   "os"
-  "io"
 )
 
 type PageVariables struct {
